@@ -1,6 +1,6 @@
 def chain():
 
-    print('Welcome the the Chain Rule sub complex. The Chain Rule is given by dx/dy f(g(x))= d/dx f(g(x)) * d/dx g(x).')
+    print('Welcome the the Chain Rule subdirectory. The Chain Rule is given by dx/dy f(g(x))= d/dx f(g(x)) * d/dx g(x).')
 
     B = int(input('''What Rule will differentiate g(x)
                         Enter 1 for the constant multiple rule
