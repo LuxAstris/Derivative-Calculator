@@ -1,7 +1,7 @@
 
 print("Welcome to the derivative calculator.")
 
-specific_function = int(input('''Please specify the Derivative rule you need for the function:
+specific_function = int(input('''Please specify the derivative rule you need for the function:
                                 1 Constant multiply Rule
                                 2 Power Rule
                                 3 Product Rule
@@ -17,7 +17,7 @@ def power():
 
     coefficient = float(input('Enter the coefficient of x in x ^ n'))
 
-    power_rule = coefficient * n*x**(n-1)
+    power_rule = coefficient * n* x ** (n-1)
 
     print("the derivative of f(x) is ")
 
