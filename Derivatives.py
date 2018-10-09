@@ -1,7 +1,7 @@
 
 print("Welcome to the derivative calculator.")
 
-specific_function = int(input('''Please specify the derivative rule you need for the function:
+specific_function = int(input('''Please specify the Derivative rule you need for the function:
                                 1 Constant multiply Rule
                                 2 Power Rule
                                 3 Product Rule
@@ -17,7 +17,7 @@ def power():
 
     coefficient = float(input('Enter the coefficient of x in x ^ n'))
 
-    power_rule = coefficient * n* x ** (n-1)
+    power_rule = coefficient * n*x**(n-1)
 
     print("the derivative of f(x) is ")
 
@@ -163,6 +163,84 @@ def quotient():
     return quotient_rule
 
 
+def chain():
+
+    B = int(input('''What Rule will differentiate g(x)
+                        Enter 1 for the constant multiple rule
+                        Enter 2 for the power rule
+                        Enter 3 for the product rule
+                        Enter 4 for the quotient rule'''))
+
+    if B == 1:
+
+        constant_multiple()
+
+        H_prime = constant_multiple()
+
+    elif B == 2:
+
+        power()
+
+        H_prime = power()
+
+    elif B == 3:
+
+        product()
+
+        H_prime = product()
+
+    elif B == 4:
+
+        quotient()
+
+        H_prime = quotient
+    else:
+
+        print('Sorry, you entered an invalid input please try again.')
+
+        chain()
+
+    A = int(input('''What Rule will differentiate f(g(x))
+                    Enter 1 for the constant multiple rule
+                    Enter 2 for the power rule
+                    Enter 3 for the product rule
+                    Enter 4 for the quotient rule'''))
+
+    if A == 1:
+
+        constant_multiple()
+
+        F_prime = contant_multiple() * H_prime
+
+    elif A == 2:
+
+        power()
+
+        F_prime = power() * H_prime
+
+    elif A == 3:
+
+        product()
+
+        F_prime = product() * H_prime
+
+    elif A == 4:
+
+        quotient()
+
+        F_prime = quotient() * H_prime
+
+    else:
+
+        print('Sorry, you entered an invalid input please try again.')
+
+        chain()
+
+    chain_rule = F_prime * H_prime
+
+    print(chain_rule)
+
+    return chain_rule
 
 if specific_function == 1:
 
@@ -180,10 +258,16 @@ elif specific_function == 3:
 
 elif specific_function == 4:
 
-    print(
-        'Welcome to the Quotient Rule sub complex. The Quotient rule is given by the dx/dy U/G = (U * d/dx G - d/dx U * G)/ G**2 .')
+    print('Welcome to the Quotient Rule sub complex. The Quotient rule is given by the dx/dy U/G = (U * d/dx G - d/dx U * G)/ G**2 .')
 
     quotient()
+
+elif specific_function == 5:
+
+    print('Welcome to the Chain Rule sub complex. The Chain Rule is given by dx/dy f(g(x))= d/dx f(g(x)) * d/dx g(x).')
+
+    chain()
+
 
 else:
     print('Sorry you entered an invalid input. Please try again')
