@@ -251,19 +251,19 @@ elif specific_function == 2:
 
 elif specific_function == 3:
 
-    print('Welcome to the product rule calculator. the Product rule is given by (dx/dy) U*G = U * d/dx G + d/dx U * G')
+    print('Welcome to the Product Rule calculator. the Product rule is given by (dx/dy) U*G = U * d/dx G + d/dx U * G')
 
     product()
 
 elif specific_function == 4:
 
-    print('Welcome to the Quotient Rule sub complex. The Quotient rule is given by the dx/dy U/G = (U * d/dx G - d/dx U * G)/ G**2 .')
+    print('Welcome to the Quotient Rule calculator. The Quotient rule is given by the dx/dy U/G = (U * d/dx G - d/dx U * G)/ G**2 .')
 
     quotient()
 
 elif specific_function == 5:
 
-    print('Welcome to the Chain Rule sub complex. The Chain Rule is given by dx/dy f(g(x))= d/dx f(g(x)) * d/dx g(x).')
+    print('Welcome to the Chain Rule calculator. The Chain Rule is given by dx/dy f(g(x))= d/dx f(g(x)) * d/dx g(x).')
 
     chain()
 
