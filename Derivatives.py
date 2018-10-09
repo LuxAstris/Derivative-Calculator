@@ -99,7 +99,6 @@ def product():
 
     return product_rule
 
-# not quite right
 def quotient():
     x = float(input('Enter in the value of x upon which the function will be evaluated.'))
 
